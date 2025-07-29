@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Smartphone, BookOpen, Award, Gift } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -51,12 +52,14 @@ const CallToAction = () => {
               Join this month's tree-planting challenge and win tree-planting kits, 
               solar lamps, and mobile airtime for you and your school!
             </p>
+            <Link to="/challenges" className="inline-block">
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full"
             >
               Join Challenge Now
             </Button>
+            </Link>
           </CardContent>
         </Card>
 

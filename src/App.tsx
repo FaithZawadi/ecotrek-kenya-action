@@ -7,7 +7,10 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import  Learn from "./pages/Learn";
 import  HowItWorks from "./pages/HowItWorks";
+//  learn components
+import TreesForest from "./components/learn/TreesForest";
 import NotFound from "./pages/NotFound";
+import ChallengesPage from "./pages/Challanges";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +25,12 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          // learn components
+          <Route path="/learn/trees-forest" element={<TreesForest />} />
+          <Route path="/challenges" element={<ChallengesPage />} />
+          {/* ADD ALL CUSTOM ROUTES BELOW THE CATCH-ALL "*" ROUTE */}
+          
+                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
