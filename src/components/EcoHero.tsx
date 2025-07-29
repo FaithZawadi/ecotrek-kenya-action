@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Target, Smartphone } from "lucide-react";
+import { Leaf, Target, Smartphone, Info } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EcoHero = () => {
   return (
@@ -16,6 +17,12 @@ const EcoHero = () => {
             <span className="text-2xl font-bold text-primary">EcoTrek</span>
           </div>
           <div className="hidden md:flex items-center gap-4">
+            <Link to="/about">
+              <Button variant="outline" size="sm">
+                <Info className="h-4 w-4 mr-2" />
+                About Us
+              </Button>
+            </Link>
             <Button variant="outline" size="sm">
               <Target className="h-4 w-4 mr-2" />
               Track My Impact
