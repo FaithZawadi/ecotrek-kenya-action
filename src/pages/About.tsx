@@ -287,7 +287,7 @@ const About = () => {
                         <Heart className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">Faith Kiiru</h3>
+                        <h3 className="text-xl font-bold text-foreground">Faith Zawadi</h3>
                         <p className="text-muted-foreground">Co-Founder & CEO</p>
                       </div>
                     </div>
@@ -306,7 +306,7 @@ const About = () => {
                         <Users className="h-6 w-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">David Mbugua</h3>
+                        <h3 className="text-xl font-bold text-foreground">Vincent Kimanzi</h3>
                         <p className="text-muted-foreground">Co-Founder & CTO</p>
                       </div>
                     </div>

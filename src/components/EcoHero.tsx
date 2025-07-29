@@ -23,6 +23,12 @@ const EcoHero = () => {
                 About Us
               </Button>
             </Link>
+            <Link to="/learn">
+              <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Leaf className="h-4 w-4 mr-2" />
+                Start Learning
+              </Button>
+            </Link>
             <Button variant="outline" size="sm">
               <Target className="h-4 w-4 mr-2" />
               Track My Impact
