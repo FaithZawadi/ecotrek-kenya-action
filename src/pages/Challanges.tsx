@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { UploadCloud, Leaf, Droplet, Recycle } from "lucide-react";
+import { UploadCloud, Leaf, Droplet, Recycle, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const challenges = [
@@ -9,18 +10,21 @@ const challenges = [
     description: "Plant a tree in your community and share a photo of your work!",
     points: 15,
     icon: <Leaf className="h-8 w-8 text-green-600" />,
+    link: "/challenges/plant-tree",
   },
   {
     title: "Home Water Audit",
     description: "Check for water leaks and install water-saving taps or buckets.",
     points: 10,
     icon: <Droplet className="h-8 w-8 text-sky-500" />,
+    link: "/challenges/water-audit",
   },
   {
     title: "Recycled Art Project",
     description: "Create something cool using plastic bottles, boxes, or cans!",
     points: 12,
     icon: <Recycle className="h-8 w-8 text-yellow-500" />,
+    link: "/challenges/recycled-art",
   },
 ];
 
@@ -34,6 +38,18 @@ export default function ChallengesPage() {
 
   return (
     <section className="min-h-screen px-6 py-20 bg-muted">
+      {/* Navigation Header */}
+      <div className="flex items-center justify-between mb-8 max-w-6xl mx-auto">
+        <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Link>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-primary">Challenges</span>
+        </div>
+      </div>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,9 +77,11 @@ export default function ChallengesPage() {
             <h3 className="text-xl font-semibold text-foreground mb-2">{c.title}</h3>
             <p className="text-muted-foreground text-sm mb-4">{c.description}</p>
             <p className="font-bold text-green-700 mb-4">+{c.points} EcoPoints</p>
-            <Button onClick={handleSubmit} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-              Take Challenge
-            </Button>
+            <Link to={c.link}>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                Take Challenge
+              </Button>
+            </Link>
           </motion.div>
         ))}
       </div>

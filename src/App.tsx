@@ -12,6 +12,10 @@ import TreesForest from "./components/learn/TreesForest";
 import PlasticRecycling from "./components/learn/PlasticRecycling";
 import WaterConservation from "./components/learn/WaterConservation";
 import ClimateBasics from "./components/learn/ClimateBasics";
+// challenge components
+import PlantTreeChallenge from "./components/challenges/PlantTreeChallenge";
+import WaterAuditChallenge from "./components/challenges/WaterAuditChallenge";
+import RecycledArtChallenge from "./components/challenges/RecycledArtChallenge";
 import NotFound from "./pages/NotFound";
 import ChallengesPage from "./pages/Challanges";
 
@@ -34,6 +38,10 @@ const App = () => (
           <Route path="/learn/water-conservation" element={<WaterConservation />} />
           <Route path="/learn/climate-basics" element={<ClimateBasics />} />
           <Route path="/challenges" element={<ChallengesPage />} />
+          // challenge components
+          <Route path="/challenges/plant-tree" element={<PlantTreeChallenge />} />
+          <Route path="/challenges/water-audit" element={<WaterAuditChallenge />} />
+          <Route path="/challenges/recycled-art" element={<RecycledArtChallenge />} />
           {/* ADD ALL CUSTOM ROUTES BELOW THE CATCH-ALL "*" ROUTE */}
           
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
