@@ -9,6 +9,9 @@ import  Learn from "./pages/Learn";
 import  HowItWorks from "./pages/HowItWorks";
 //  learn components
 import TreesForest from "./components/learn/TreesForest";
+import PlasticRecycling from "./components/learn/PlasticRecycling";
+import WaterConservation from "./components/learn/WaterConservation";
+import ClimateBasics from "./components/learn/ClimateBasics";
 import NotFound from "./pages/NotFound";
 import ChallengesPage from "./pages/Challanges";
 
@@ -26,7 +29,10 @@ const App = () => (
           <Route path="/learn" element={<Learn />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           // learn components
-          <Route path="/learn/trees-forest" element={<TreesForest />} />
+          <Route path="/learn/trees-forests" element={<TreesForest />} />
+          <Route path="/learn/plastic-recycling" element={<PlasticRecycling />} />
+          <Route path="/learn/water-conservation" element={<WaterConservation />} />
+          <Route path="/learn/climate-basics" element={<ClimateBasics />} />
           <Route path="/challenges" element={<ChallengesPage />} />
           {/* ADD ALL CUSTOM ROUTES BELOW THE CATCH-ALL "*" ROUTE */}
           
