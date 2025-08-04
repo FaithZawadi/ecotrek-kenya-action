@@ -67,13 +67,16 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
-      <div className="container mx-auto px-4 py-6">
-        <Link to="/">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Button>
+      <div className="flex items-center justify-between px-6 py-6 max-w-6xl mx-auto">
+        <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
         </Link>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-primary">About</span>
+        </div>
       </div>
 
       {/* Hero Section */}

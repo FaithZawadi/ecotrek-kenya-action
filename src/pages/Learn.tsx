@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Book, TreePine, Droplet, Recycle, Sparkles } from "lucide-react";
+import { Book, TreePine, Droplet, Recycle, Sparkles, ArrowLeft, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const categories = [
@@ -37,6 +37,18 @@ const categories = [
 export default function LearnPage() {
   return (
     <section className="min-h-screen bg-muted px-6 py-16">
+      {/* Navigation Header */}
+      <div className="flex items-center justify-between mb-8 max-w-6xl mx-auto">
+        <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Link>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-primary">Learn</span>
+        </div>
+      </div>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

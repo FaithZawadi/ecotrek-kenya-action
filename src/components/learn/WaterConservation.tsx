@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Droplet, BookOpen, Camera, Trophy } from "lucide-react";
+import { Droplet, BookOpen, Camera, Trophy, ArrowLeft, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const lessons = [
   {
@@ -25,7 +26,23 @@ const lessons = [
 
 export default function WaterConservation() {
   return (
-    <section className="min-h-screen px-6 py-20 bg-white text-center">
+    <section className="min-h-screen px-6 py-20 bg-white">
+      {/* Navigation Header */}
+      <div className="flex items-center justify-between mb-8 max-w-6xl mx-auto">
+        <Link to="/learn" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Topics
+        </Link>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <span>/</span>
+          <Link to="/learn" className="hover:text-primary transition-colors">Learn</Link>
+          <span>/</span>
+          <span className="text-primary">Water Conservation</span>
+        </div>
+      </div>
+
+      <div className="text-center">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -76,6 +93,7 @@ export default function WaterConservation() {
           Your Progress: <span className="font-bold text-primary">40%</span> complete
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }
