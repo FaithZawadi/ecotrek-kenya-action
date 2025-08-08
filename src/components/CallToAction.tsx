@@ -24,14 +24,16 @@ const CallToAction = () => {
             <Smartphone className="h-5 w-5 mr-2" />
             Download App
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="text-lg px-8 py-4 rounded-full border-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            <BookOpen className="h-5 w-5 mr-2" />
-            Start Learning
-          </Button>
+          <Link to="/learn">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-lg px-8 py-4 rounded-full border-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <BookOpen className="h-5 w-5 mr-2" />
+              Start Learning
+            </Button>
+          </Link>
           <Link to="/climate-leader">
             <Button 
               variant="outline" 
