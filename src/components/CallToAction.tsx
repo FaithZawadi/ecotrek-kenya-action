@@ -32,14 +32,16 @@ const CallToAction = () => {
             <BookOpen className="h-5 w-5 mr-2" />
             Start Learning
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="text-lg px-8 py-4 rounded-full border-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            <Award className="h-5 w-5 mr-2" />
-            Become a Climate Leader
-          </Button>
+          <Link to="/climate-leader">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-lg px-8 py-4 rounded-full border-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Award className="h-5 w-5 mr-2" />
+              Become a Climate Leader
+            </Button>
+          </Link>
         </div>
 
         <Card className="max-w-4xl mx-auto border border-accent/30 bg-accent/5 backdrop-blur-sm">
