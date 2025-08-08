@@ -1,4 +1,4 @@
-import { Book, Leaf, Gift } from "lucide-react";
+import { Book, Leaf, Gift, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -27,6 +27,18 @@ const steps = [
 export default function HowItWorksPage() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-amber-50 py-20 px-4">
+      {/* Navigation Header */}
+      <div className="flex items-center justify-between mb-8 max-w-5xl mx-auto">
+        <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Link>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-primary">How It Works</span>
+        </div>
+      </div>
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
